@@ -150,3 +150,26 @@ void MakePowTwo()
 
     foreach (int i in arr) Write($"{i} ");
 }
+
+void SortRevreseArr()
+{
+    int[] arr = [7, 4, 8, 10];
+
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        int max = i;
+
+        for (int j = i + 1; j < arr.Length; j++)
+        {
+            if (arr[j] > arr[max])
+                max = j;
+
+
+                int tmp = arr[i];
+                arr[i] = arr[max];
+                arr[max] = tmp;
+        }
+    }
+
+    foreach (int i in arr) Write($"{i} ");
+}
