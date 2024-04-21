@@ -84,14 +84,10 @@ void SortArr()
         {
             if (arr[j] < arr[min])
                 min = j;
-
-            if (min != i)
-            {
-                int tmp = arr[i];
-                arr[i] = arr[min];
-                arr[min] = tmp;
-            }
         }
+        int tmp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = tmp;
     }
 
     foreach (int i in arr) Write($"{i} ");
@@ -163,12 +159,10 @@ void SortRevreseArr()
         {
             if (arr[j] > arr[max])
                 max = j;
-
-
-                int tmp = arr[i];
-                arr[i] = arr[max];
-                arr[max] = tmp;
         }
+        int tmp = arr[i];
+        arr[i] = arr[max];
+        arr[max] = tmp;
     }
 
     foreach (int i in arr) Write($"{i} ");
